@@ -11,12 +11,17 @@ path = "src/main.rs"
 name = "zero2prod"
 
 [dependencies]
-actix-web = "=4.0.0-beta.8"
-actix-http = "=3.0.0-beta.9"
+actix-web = "=4.0.0-beta.18"
+actix-http = "=3.0.0-beta.17"
 serde = { version ="1", features = ["derive"] }
 config = "0.11.0"
 uuid = { version = "0.8.1", features = ["v4"] }
 chrono = "0.4.15"
+tracing = { version = "0.1", features = ["log"] }
+tracing-futures = "0.2"
+tracing-log = "0.1"
+tracing-subscriber = { version = "0.2.12", features = ["registry", "env-filter"] }
+tracing-bunyan-formatter = "0.2"
 
 [dependencies.sqlx]
 version = "0.5.7"
