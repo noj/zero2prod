@@ -15,7 +15,7 @@ pub fn run(
 
   let server = HttpServer::new(move || {
     App::new()
-      .wrap(Logger::default())
+      .wrap(Logger::default()) // FIXME: should use TracingLogger
       .route("/health_check", web::get().to(health_check))
       .route("/subscriptions", web::post().to(subscribe))
       .app_data(db_pool.clone())

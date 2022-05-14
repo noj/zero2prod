@@ -1,5 +1,5 @@
 // vim: ts=2 sw=2
-//
+#[allow(clippy::toplevel_ref_arg)]
 pub mod configuration;
 pub mod routes;
 pub mod startup;
